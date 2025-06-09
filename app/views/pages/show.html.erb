@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="d-flex justify-content-between mb-3">
+  <h2 class="mb-0">
+    <%= link_to "←", root_path, class: "p-1 text-decoration-none text-dark rounded hover-bg" %> <%= @page.name %>
+  </h2>
+  <div class="d-flex gap-2">
+    <%= button_to "Run", page_check_path(@page), class: "btn btn-secondary shadow p-2 rounded" %>
+    <%= link_to "Edit", edit_page_path(@page), class: "btn btn-secondary shadow p-2 rounded" %>
+  </div>
+</div>
+
+<%= link_to @page.url, @page.url, class: "text-dark", target: "_blank" %>
+
+<div class="mt-4">
+  <h4>Results</h4>
+  <%= render @page.results.order(created_at: :desc) %>
+</div>
+
