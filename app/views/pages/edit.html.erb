@@ -1,6 +1,7 @@
-<% content_for :title, "Editing page" %>
-
-<h1 class="mb-3">Editing page</h1>
+<h2 class="mb-3 fs-3">
+  <%= link_to "◂", @page, class: "p-1 text-decoration-none text-dark rounded hover-bg" %>
+  Edit page
+</h2>
 
 <%= render "form", page: @page %>
 
