@@ -1,14 +1,11 @@
-<h2 class="mb-3 fs-3">
-  <%= link_to "◂", @page, class: "p-1 text-decoration-none text-dark rounded hover-bg" %>
-  Edit page
-</h2>
+<div class="d-flex justify-content-between">
+  <h2 class="mb-3 fs-3">
+    <%= link_to "◂", @page, class: "p-1 text-decoration-none text-dark rounded hover-bg" %>
+    Edit page
+  </h2>
+
+    <%= button_to "Delete", @page, method: :delete, class: "btn btn-secondary shadow p-2 rounded", data: { turbo_confirm: "Are you sure?" } %>
+
+</div>
 
 <%= render "form", page: @page %>
-
-<br>
-
-<div>
-  <%= button_to "Destroy this page", @page, method: :delete %>
-  <%= link_to "Show this page", @page %> |
-  <%= link_to "Back to pages", pages_path %>
-</div>

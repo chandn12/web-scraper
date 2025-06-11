@@ -13,12 +13,12 @@
 
   <div>
     <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, placeholder: "My website" %>
   </div>
 
   <div>
     <%= form.label :url, style: "display: block" %>
-    <%= form.url_field :url %>
+    <%= form.url_field :url, placeholder: "https://example.org/..." %>
   </div>
 
   <div>
@@ -28,15 +28,15 @@
 
   <div>
     <%= form.label :selector, style: "display: block" %>
-    <%= form.text_field :selector %>
+    <%= form.text_field :selector, placeholder: ".class" %>
   </div>
 
   <div>
     <%= form.label :match_text, style: "display: block" %>
-    <%= form.text_field :match_text %>
+    <%= form.text_field :match_text, placeholder: "text to match" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="mt-3">
+    <%= form.submit class: "btn btn-secondary shadow p-2 rounded" %>
   </div>
 <% end %>

@@ -8,3 +8,15 @@
 .hover-bg:hover {
       background-color:#c5bdf021;
 }
+.small-text {
+    font-size:12px;
+}
+.success {
+    color:#109648;
+    font-size:12px;
+
+}
+.fail {
+    color:#da0835;
+    font-size:12px;
+}
