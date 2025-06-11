@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
+  # Mount Letter Opener Web only in development
+  if Rails.env.development?
+    require 'letter_opener_web'
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
+
   resources :pages do
     resource :check, only: [:create]
   end

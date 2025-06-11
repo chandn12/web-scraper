@@ -8,11 +8,14 @@
 .hover-bg:hover {
       background-color:#c5bdf021;
 }
+.btn-secondary:active {
+    background-color: #958ae0!important;
+}
 .small-text {
     font-size:12px;
 }
 .success {
-    color:#109648;
+    color:#209e54;
     font-size:12px;
 
 }
