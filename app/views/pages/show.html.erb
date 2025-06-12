@@ -13,10 +13,9 @@
   </div>
 </div>
 
-<%= link_to @page.url, @page.url, class: "text-dark", target: "_blank" %>
+<%= link_to @page.url, @page.url, class: "text-dark", target: :_blank %>
 
 <div class="mt-4">
-  <h4>Results</h4>
+  <h4>Recent results</h4>
   <%= render @page.results.order(created_at: :desc) %>
 </div>
-
